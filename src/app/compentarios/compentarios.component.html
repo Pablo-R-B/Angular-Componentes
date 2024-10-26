@@ -1,0 +1,25 @@
+<h1 class="ejercicio">5. Componente de Comentarios</h1>
+
+
+<div class="contenido">
+  <input
+    type="text"
+    [(ngModel)]="comentario"
+    placeholder="Escribe un comentario"
+    (keyup.enter)="enviarComentario()"
+  />
+  <button (click)="enviarComentario()">Enviar</button>
+
+
+
+<ul>
+  <li *ngFor="let com of comentarios">
+    {{ com }}
+  </li>
+</ul>
+
+</div>
+
+
+
+

@@ -1,0 +1,9 @@
+<h1 class="ejercicio">4. Componente de Temporizador</h1>
+<div class="contenido">
+<input type="number" [(ngModel)]="tiempoRestante" placeholder="Enter time in seconds" />
+<button (click)="empezarCuentaAtras(tiempoRestante)">Empezar cuenta atrás</button>
+<button (click)="detenerCuentaAtras()">Parar cuenta atrás</button>
+<div *ngIf="tiempoRestante >= 0">
+  <h3>Tiempo restante: {{ tiempoRestante }} segundo</h3>
+</div>
+</div>

@@ -1,0 +1,43 @@
+<h1 class="ejercicio">8. Total de la compra</h1>
+<div class="contenido">
+  <div class="item-list">
+    <h2>Artículos</h2>
+    <div *ngFor="let prod of productosLista" class="item">
+      <div class="item-details">
+
+        <span class="articulos">{{ prod.nombre }} - {{ prod.precio | currency:'EUR':'symbol':'1.2-2' }}</span>
+      </div>
+      <div class="item-controls">
+        <button (click)="quitarArticulo(prod)">-</button>
+        <span>{{ prod.cantidad }}</span>
+        <button (click)="agregarArticulo(prod)">+</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="ticket">
+    <h2>Ticket de la compra</h2>
+
+
+
+    <div class="ticket-item">
+      <ul>
+      @for (p of productosLista;track productosLista){
+        @if(p.cantidad > 0){
+          <li>{{ p.nombre }} x {{ p.cantidad }} = {{ (p.precio * p.cantidad) | currency:'EUR':'symbol':'1.2-2' }} </li>
+
+
+        }
+
+      }
+      </ul>
+    </div>
+
+    <hr />
+    <div class="total">
+      <strong>Total:</strong> <span>{{ calcularTotal() | currency:'EUR':'symbol':'1.2-2' }}</span>
+    </div>
+  </div>
+
+</div>

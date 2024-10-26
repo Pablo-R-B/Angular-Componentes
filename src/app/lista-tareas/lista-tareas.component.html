@@ -1,0 +1,15 @@
+<h1 class="ejercicio">3. Componente de Lista de Tareas</h1>
+<div class="contenido">
+  <input type="text" [(ngModel)]="tarea" placeholder="Agregar nueva tarea" />
+  <button (click)="agregarTarea()">Agregar</button>
+
+<ul>
+  @for (tarea of tareasLista; track tareasLista){
+    <li>{{ tarea }}</li>
+
+  }
+
+</ul>
+</div>
+
+

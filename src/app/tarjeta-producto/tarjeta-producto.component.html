@@ -1,0 +1,13 @@
+<h1 class="ejercicio">6. Componente de Tarjeta de Producto</h1>
+<div class="contenido">
+<input [(ngModel)]="nombre" placeholder="Nombre" />
+<input [(ngModel)]="descripcion" placeholder="Descripción" />
+<input [(ngModel)]="precio" placeholder="Precio" />
+<div class="producto-card">
+  <h2 class="producto-titulo">{{nombre}}</h2>
+  <div class="producto-contenido">
+    <p class="producto-descripcion">{{descripcion}}</p>
+    <p class="producto-precio">{{precio | currency:'EUR':'symbol':'1.2-2'}}</p>
+  </div>
+</div>
+</div>

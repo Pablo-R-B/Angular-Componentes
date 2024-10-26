@@ -1,0 +1,39 @@
+.producto-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  max-width: 300px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.producto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.producto-titulo {
+  color: #333;
+  font-size: 1.5em;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+}
+
+.producto-contenido {
+  padding: 8px 0;
+}
+
+.producto-descripcion {
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.producto-precio {
+  color: #2c5282;
+  font-size: 1.25em;
+  font-weight: bold;
+  text-align: right;
+}
